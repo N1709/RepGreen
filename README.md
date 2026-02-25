@@ -19,9 +19,8 @@
 
 <br/>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/N1709/msm6125-kernel-6.18?style=flat-square&color=22c55e&labelColor=1a1a1a)
-![GitHub repo size](https://img.shields.io/github/repo-size/N1709/msm6125-kernel-6.18?style=flat-square&color=6366f1&labelColor=1a1a1a)
-![GitHub stars](https://img.shields.io/github/stars/N1709/msm6125-kernel-6.18?style=flat-square&color=f59e0b&labelColor=1a1a1a)
+![GitHub last commit](https://img.shields.io/github/last-commit/N1709/RepGreen?style=flat-square&color=22c55e&labelColor=1a1a1a)
+![GitHub stars](https://img.shields.io/github/stars/N1709/RepGreen?style=flat-square&color=f59e0b&labelColor=1a1a1a)
 
 </div>
 
