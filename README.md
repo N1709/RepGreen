@@ -1,7 +1,5 @@
 <div align="center">
 
-# RepGreen
-
 <img width="757" height="180" alt="gambar" src="https://github.com/user-attachments/assets/cc219692-81f5-42eb-bbe5-bffb95afdff7" />
 
 <br/>
