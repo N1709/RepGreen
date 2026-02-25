@@ -42,14 +42,16 @@ Whether you want to fill it up, clear it out, or automate daily updates — RepG
 
 ## Features
 
-| | Feature | Description |
-|---|---|---|
-| 🟩 | **Fill Graph** | Commit to any year, month, or weekday pattern |
-| 🗑️ | **Clear Graph** | Wipe all history via repo delete and recreate |
-| ⚡ | **GitHub Actions** | Auto-add one square daily, no server needed |
-| 🌍 | **170+ Timezones** | Schedule at your exact local time |
-| 🎛️ | **Commit Density** | Light, Medium, Heavy, or fully Custom |
-| 🔒 | **Token Secure** | Token entered manually, never stored in code |
+| Feature | Description |
+| :--- | :--- |
+| **Custom Contribution Pattern** | Complete flexibility to commit to any specific year, month, or weekday pattern. |
+| **Automated History Reset** | Efficiently wipe all history via automated repository deletion and recreation. |
+| **Serverless Automation** | Integrated **GitHub Actions** to automatically add daily squares without requiring an external server. |
+| **170+ Timezone Support** | Precision scheduling that aligns perfectly with your local time across 170+ global timezones. |
+| **Adjustable Commit Density** | Full control over contribution intensity with options for **Light**, **Medium**, **Heavy**, or **Custom** density. |
+| **Token-Based Security** | Enhanced security protocols where tokens are entered manually and never stored within the source code. |
+
+> **Security Notice:** Always use a *Personal Access Token* (PAT) and ensure that sensitive credentials are never exposed in public repositories.
 
 </div>
 
