@@ -72,7 +72,7 @@ def banner():
   ██╔══██╗██╔══╝  ██╔═══╝ ██║   ██║██╔══██╗██╔══╝  ██╔══╝  ██║╚██╗██║
   ██║  ██║███████╗██║     ╚██████╔╝██║  ██║███████╗███████╗██║ ╚████║
   ╚═╝  ╚═╝╚══════╝╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝{R}
-{GR}  GitHub Contribution Graph Manager                          v2.7.0{R}
+{GR}  GitHub Contribution Graph Manager                          v2.7.3{R}
 {GR}  ─────────────────────────────────────────────────────────────────{R}
 """)
 
@@ -104,11 +104,16 @@ def menu_item(num, text, desc=""):
 
 # ── GitHub API ─────────────────────────────────────────────────────────────────
 def validate_token(token):
-    try:
-        r = api_get("https://api.github.com/user", token)
-        return r.json() if r.status_code == 200 else None
-    except Exception:
-        return None
+    for _ in range(3):  # retry 3x
+        try:
+            r = api_get("https://api.github.com/user", token)
+            data = r.json()
+            if r.status_code == 200 and 'login' in data:
+                return data
+            time.sleep(2)
+        except Exception:
+            time.sleep(2)
+    return None
 
 def get_repos(token):
     repos, page = [], 1
