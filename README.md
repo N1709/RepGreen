@@ -114,10 +114,11 @@ RepGreen can push a workflow directly to your repo that runs every single day at
 
 | Mode | Description |
 |------|-------------|
-| Full year | Jan to today |
+| Full year | It will not be full because it follows the hours and days listed. |
 | Full year (force) | Jan to Dec including future |
 | Specific month | One chosen month only |
 | Specific weekday | Every Monday, Friday, etc. |
+| automatic | Every day will be updated automatically. |
 
 </div>
 
