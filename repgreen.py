@@ -178,8 +178,7 @@ def generate_dates(mode, year, min_c, max_c, bulan=None, hari=None, skip_pct=15,
 
 # ── Git Operations ─────────────────────────────────────────────────────────────
 def run(cmd, cwd=None, env=None):
-    # env passed in = complete override (used for commits with GIT_* vars)
-    # env=None = use os.environ + force English locale
+    # env passed in = complete override
     if env is None:
         e = {**os.environ, "LANG": "C", "LC_ALL": "C"}
     else:
@@ -247,11 +246,10 @@ def resolve_branch(work_dir):
 
 def make_commits(repo_url, token, username, dates, repo_data=None, work_dir="/tmp/repgreen_work"):
     """
-    Reset repo bersih (delete+recreate via API jika repo_data tersedia),
-    lalu git init lokal, buat semua commits, push --force.
-    Tidak clone repo lama — jadi history lama tidak ikut sama sekali.
+    Reset the repo clean (delete+recreate via API if repo_data is available),
+    then git init locally, make all commits, push --force.
+    Don't clone the old repo—so the old history isn't included at all.
     """
-    # Step 1: Reset repo via API (delete + recreate) agar benar-benar bersih
     if repo_data:
         section("RESETTING REPOSITORY")
         info("Deleting and recreating repo to ensure clean history...")
@@ -276,7 +274,6 @@ def make_commits(repo_url, token, username, dates, repo_data=None, work_dir="/tm
                 error("Failed to recreate repo. Process aborted.")
                 return False
 
-    # Step 2: Buat local git repo baru dari nol (TIDAK clone)
     if os.path.exists(work_dir):
         run(["rm", "-rf", work_dir])
     os.makedirs(work_dir)
@@ -319,7 +316,6 @@ def make_commits(repo_url, token, username, dates, repo_data=None, work_dir="/tm
 
     print()
 
-    # Step 3: Set branch name dan push ke remote
     section("PUSHING")
     branch = "main"
     run(["git", "-C", work_dir, "branch", "-M", branch])
@@ -1219,7 +1215,7 @@ def main():
             result = clear_commits(repo_data, token, username)
             if result:
                 section("DONE")
-                success("Repository telah dihapus dan dibuat ulang — 100% bersih.")
+                success("The repository has been deleted and recreated — 100% clean.")
                 warn("Repo is now empty. Ready to fill with Fill contribution graph.")
             print()
             prompt("Press Enter to return to menu")
