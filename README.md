@@ -65,8 +65,8 @@ Whether you want to fill it up, clear it out, or automate daily updates — RepG
 **1. Install**
 
 ```bash
-git clone https://github.com/N1709/msm6125-kernel-6.18.git
-cd msm6125-kernel-6.18
+git clone https://github.com/N1709/RepGreen.git
+cd RepGreen
 python3 repgreen.py
 ```
 
