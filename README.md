@@ -20,7 +20,6 @@
 <br/>
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/N1709/RepGreen?style=flat-square&color=22c55e&labelColor=1a1a1a)
-![GitHub stars](https://img.shields.io/github/stars/N1709/RepGreen?style=flat-square&color=f59e0b&labelColor=1a1a1a)
 
 </div>
 
